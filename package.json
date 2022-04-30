@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "graph": "^0.2.0",
-    "js-shortest-path": "^1.1.0"
+    "js-shortest-path": "^1.1.0",
+    "jsnetworkx": "^0.3.4"
   }
 }
