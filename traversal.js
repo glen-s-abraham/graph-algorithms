@@ -33,23 +33,29 @@ graph.nodes().forEach(node=>{visitedMatrix[node]=false})
 
 const path = []
 
-chaeckIfAllNodesAreVisited=()=>{
+checkIfAllNodesAreVisited=()=>{
     let isComplete=true
     Object.values(visitedMatrix).forEach(val=>{if(!val){isComplete=false};})
     return isComplete
 }
 
-graph.nodes().forEach(node=>{
-    if((graph.degree(node)-1)>1){
-        let neighbors = graph.neighbors(node)
-        neighbors = neighbors.filter(node=>visitedMatrix[node]==false)
-        console.log(neighbors)
-        unvisitedMatrix[node]=neighbors
-    }
-    console.log(chaeckIfAllNodesAreVisited())
-    visitedMatrix[node]=true
+// graph.nodes().forEach(node=>{
+//     if((graph.degree(node)-1)>1){
+//         let neighbors = graph.neighbors(node)
+//         neighbors = neighbors.filter(node=>visitedMatrix[node]==false)
+//         console.log(neighbors)
+//         unvisitedMatrix[node]=neighbors
+//     }
+//     console.log(checkIfAllNodesAreVisited())
+//     visitedMatrix[node]=true
     
-})
+// })
+
+const startNode = 'A'
+visitedMatrix[startNode] = true
+while(checkIfAllNodesAreVisited()){
+    
+}
 
 console.log(unvisitedMatrix)
 
